@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    // 注解库
+    implementation "com.android.support:support-annotations:${SUPPORT_LIB_VERSION}"
+
+    implementation "com.android.support:support-compat:${SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:support-fragment:${SUPPORT_LIB_VERSION}"
+
+    testImplementation "junit:junit:${ANDROID_JUNIT_VERSION}"
+    androidTestImplementation "com.android.support.test:runner:${ANDROID_RUNNER_VERSION}"
+
+}
