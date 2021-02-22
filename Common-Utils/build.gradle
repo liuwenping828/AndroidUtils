@@ -28,6 +28,8 @@ dependencies {
 
     implementation "com.android.support:support-compat:${SUPPORT_LIB_VERSION}"
     implementation "com.android.support:support-fragment:${SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:support-vector-drawable:${SUPPORT_LIB_VERSION}"
+
 
     testImplementation "junit:junit:${ANDROID_JUNIT_VERSION}"
     androidTestImplementation "com.android.support.test:runner:${ANDROID_RUNNER_VERSION}"
